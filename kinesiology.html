@@ -1,0 +1,105 @@
+<html>
+    <body style="text-align:center; background-color:darkgrey">
+        <style>
+            .buttonSection {
+                background-color:rgb(178, 233, 233);
+                border:none;
+                height:50px;
+                width:500px;
+                font-size:large;
+            }
+            .buttonSection:hover {
+                background-color:rgb(126, 211, 207);
+            }
+            .buttonSS {
+                background-color:rgb(205, 176, 240);
+                border:none;
+                height:50px;
+                width:75px;
+                font-size:large;
+            }
+            .buttonSS:hover {
+                background-color:violet;
+            }
+            .buttonMainPage {
+                border:none;
+                background-color:floralwhite;
+                border-radius:5%;
+                height:300px;
+                width:300px;
+                font-size:x-large;
+                font-style:bold;
+
+            }
+            .buttonMainPage:hover {
+                background-color:lightgrey;
+            }
+        </style>
+        <div id="main-page">
+            <h1>Grade 12 Kinesiology</h1>
+            <br>
+            <button class="buttonMainPage" type="button" id="anatomy-mp" onclick="anatomyMP();">
+                <img height="250px" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Anatomical_Planes-en.svg"/>
+                <br>
+                Anatomy
+            </button>
+            <button style="margin-left:20px" class="buttonMainPage" type="button" id="bones-mp" onclick="bonesMP();">
+                <img height="250px" src="https://static.vecteezy.com/system/resources/previews/023/290/164/non_2x/watercolor-hand-drawn-realistic-human-bones-png.png"/>
+                <br>
+                Bones
+            </button>
+        </div>
+
+        <button id="to-main" type="button" onclick="backToMain();" hidden="true">Back to Main Menu</button>
+        <button id="to-section" type="button" onclick="backToSection();" hidden="true">Back to Section</button>
+        <button id="to-subsection" type="button" onclick="backToSubsection();" hidden = "true">Back to Options</button>
+        <br>
+
+        <div id="anatomy-page" hidden="true">
+            <br>
+            <button class="buttonSection" type="button" id="planes-axes" onclick="planesAxes();">Anatomical Planes and Axes</button>
+            <br>
+            <br>
+            <button class="buttonSection" type="button" id="anatomical-terms" onclick="anatomicalTerminology();">Anatomical Terminology</button>
+            <br>
+            <br>
+            <button class="buttonSection" type="button" id="movement-joints" onclick="movementAtJoints();">Movement at Joints</button>
+        </div>
+
+        <div id="subsections-page" hidden="true">
+            <h2 id="page-heading"></h2>
+            <button class="buttonSS" type="button" id="learn-ss" onclick="learnSS();">Learn</button>
+            <button class="buttonSS" type="button" id="test-ss" onclick="testSS();">Test</button>
+        </div>
+
+        <div id="learn-ss-page" hidden="true">
+            <h2 id="page-heading-learn"></h2>
+            <button type="button" id="prev-learn" onclick="prevLearn();">Previous</button>
+            <button type="button" id="next-learn" onclick="nextLearn();">Next</button>
+            <br>
+            <p id="progress-learn"></p>
+            <br>
+            <h3 id="term-learn"></h3>
+            <p id="description-learn"></p>
+            <img height="400" id="img-learn"/>
+        </div>
+
+        <div id="test-ss-page" hidden="true">
+            <h2 id="page-heading-test"></h2>
+            <p id="progress-test"></p>
+            <div id="test-elements">
+                <br>
+                <label for="test-answer-1" id="question-part-1"></label>
+                <input type="text" id="test-answer-1"/>
+                <label for="test-answer-1" id="question-part-2"></label>
+                <br>
+                <br>
+                <button type="button" id="prev-test" onclick="prevTest();">Previous</button>
+                <button type="button" id="next-test" onclick="nextTest();">Next</button>
+                <button type="button" id="submit-test" onclick="submitTest();">Submit</button>
+            </div>
+            <h3 id="test-result"></h3>
+        </div>
+    </body>
+    <script src="kinesiology.js"></script>
+</html>
